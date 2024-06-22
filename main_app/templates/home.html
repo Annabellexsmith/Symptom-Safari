@@ -9,5 +9,16 @@
     <img src="{% static 'images/symptom-safari-logo.png'%}" alt="The Symptom Safari Logo" />
 </section>
 <h1>Welcome to Symptom Safari!</h1>
-<h3>This will be the Log-in / Sign up Page!</h3>
-{% endblock %}
+<section>
+    {% if not user.is_authenticated %}
+    <section class="login-section">
+        <form action="{% url 'home' %}" method="post" class="login-form">
+            <h1>Login</h1>
+            {% csrf_token %}
+            {{ form.as_p }}
+            <input type="hidden" name="next" value="{{ next }}" />
+            <button type="submit" class="btn submit">Login</button>
+        </form>
+    </section>
+    {% endif %}
+    {% endblock %}
