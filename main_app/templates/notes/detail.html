@@ -1,0 +1,22 @@
+{% extends 'base.html' %} {% load static %} {% block head %}
+<link rel="stylesheet" href="{% static 'css/notes/note-detail.css' %}" />
+{% endblock %} {% block content %}
+<section class="note-container">
+  <div class="note-details">
+    <h1>{{ note.date }}</h1>
+    <h3>Symptoms: </h3>
+    {% if note.assessment.exists %}
+        {% for symptom in note.assessment.all %}
+        <p>{{ symptom.name }}</p>
+    {% endfor %}
+    {% else %}
+    <p>You didn't record any symptoms!</p>
+    {% endif %}
+    <p>{{ note.notes }}</p>
+  </div>
+  <div>
+    <a href="{% url 'note-update' note.id %}">Edit</a>
+    <a href="{% url 'note-delete' note.id %}">Delete</a>
+  </div>
+</section>
+{% endblock %}

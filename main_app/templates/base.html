@@ -12,15 +12,11 @@
   </head>
   <body>
     <header>
-      <div class="header-logo-container">
-        <a href="/">
-            <img src="{% static 'images/symptom-safari-logo.png'%}" alt="The Symptom Safari Logo" />
-        </a>
-      </div>
       <nav>
         <ul>
-          <li><a href="/about">About</a></li>
-          <li><a href="/notes">Notes</a></li>
+          <li><a href="{% url 'about' %}">About</a></li>
+          <li><a href="{% url 'note-index' %}">Notes</a></li>
+          <li><a href="{% url 'note-create' %}">Log Your Note</a></li>
         </ul>
       </nav>
     </header>

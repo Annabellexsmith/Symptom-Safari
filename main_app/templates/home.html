@@ -1,0 +1,13 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block head %}
+<link rel="stylesheet" href="{% static 'css/home.css' %}" />
+{% endblock %}
+{% block content %}
+
+<section class="logo-container">
+    <img src="{% static 'images/symptom-safari-logo.png'%}" alt="The Symptom Safari Logo" />
+</section>
+<h1>Welcome to Symptom Safari!</h1>
+<h3>This will be the Log-in / Sign up Page!</h3>
+{% endblock %}
