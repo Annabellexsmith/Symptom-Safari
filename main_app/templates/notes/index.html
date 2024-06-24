@@ -11,8 +11,9 @@
       <div class="card-content">
         <div class="card-img-container">
         </div>
-        <h3 class="card-title">{{ note.date|date:"M d, Y" }}</h3>
+        <h3 class="card-title">{{ note.title }}</h3>
         <p><medium>{{ note.notes}}</medium></p>
+        <p>{{ note.date|date:"M d, Y" }}</p>
       </div>
     </a>
   </div>

@@ -3,8 +3,9 @@
 {% endblock %} {% block content %}
 <section class="note-container">
   <div class="note-details">
-    <h1>{{ note.date }}</h1>
-    <h3>Symptoms: </h3>
+    <h1>{{ note.title }}</h1>
+    <p> {{ note.date }} </p>
+    <h4>Symptoms: </h4>
     {% if note.assessment.exists %}
         {% for symptom in note.assessment.all %}
         <p>{{ symptom.name }}</p>
@@ -13,6 +14,7 @@
     <p>You didn't record any symptoms!</p>
     {% endif %}
     <p>{{ note.notes }}</p>
+    <p>Last Updated: {{ note.updated }}</p>
   </div>
   <div>
     <a href="{% url 'note-update' note.id %}">Edit</a>
