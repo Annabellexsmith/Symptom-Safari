@@ -8,10 +8,10 @@
 <section class="logo-container">
     <img src="{% static 'images/symptom-safari-logo.png'%}" alt="The Symptom Safari Logo" />
 </section>
-<h1>Welcome to Symptom Safari!</h1>
+<h1 style="background-color: #567317cb; color: white;">Welcome to Symptom Safari!</h1>
 <section>
     {% if not user.is_authenticated %}
-    <section class="login-section">
+    <section class="login-section" style="background-color: #567317cb; color: white;">
         <form action="{% url 'home' %}" method="post" class="login-form">
             <h1>Login</h1>
             {% csrf_token %}

@@ -1,16 +1,14 @@
-<!DOCTYPE html>
-<html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>About</title>
-  </head>
+{% extends 'base.html' %}
+{% load static %}
+{% block head %}
+<link rel="stylesheet" href="{% static 'css/about.css' %}" />
+{% endblock %}
+{% block content %}
   <body>
-    {% extends 'base.html' %} {% block content %}
+    <div style="background-color:#567317cd; color: white;">
     <h1>About Symptom Safari!</h1>
-
     <div>Taming those treatment tigers (one symptom at a time)!</div>
-
+    </div>
     {% endblock %}
   </body>
 </html>
