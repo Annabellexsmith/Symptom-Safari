@@ -4,4 +4,27 @@ body {
     -moz-background-size: cover;
     -o-background-size: cover;
     background-size: cover;
+    display: flex;
+    flex-direction: column;
+    text-decoration: none;
 }
+.note-container {
+    background-color: #8c3a1c9a;
+    width:40%;
+    padding: 1rem;
+    border-radius: 10px;
+    color: white;
+    margin: 2rem 3rem;
+}
+
+.note-detail {
+    padding: 0 20px;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+  }
+
+  a {
+    text-decoration: none;
+    color: black;
+  }

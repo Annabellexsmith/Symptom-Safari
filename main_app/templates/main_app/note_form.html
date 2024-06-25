@@ -3,18 +3,21 @@
 {% block head %}
 <link rel="stylesheet" href="{% static 'css/form.css' %}" />
 {% endblock %} {% block content %}
-<div class="page-header">
+
+<div class="container">
+<section class="form-control form-control-lg" style="background-color:#567317f3; border: #567317dc; margin-top: 1rem; " >
     {% if object %}
     <h1>Edit Your Note from {{note.date |date:"M d, Y"}}</h1>
     {% else %}
     <h1>Add a Note!</h1>
     {% endif %}
-</div>
 <form action="" method="post" class="form-container">
   {% csrf_token %}
   <table>
     {{ form.as_table }}
   </table>
-  <button type="submit" class="btn submit">Submit!</button>
+  <button type="submit" class="btn btn-primary" style="background-color: purple;" >Submit!</button>
 </form>
+</section>
+</div>
 {% endblock %}

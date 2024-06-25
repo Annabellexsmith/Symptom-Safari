@@ -18,21 +18,20 @@
   </head>
   <body>
     <header>
-      <div class="container">
         <nav
-          class="navbar navbar-expand-lg rounded"
-          style="background-color: #f2ae2e"
+          class="navbar navbar-expand-lg  justify-content-end"
+          style="background-color: #567317;"
         >
-          <ul class="navbar-nav">
+          <ul class="nav nav-fill">
             {% if user.is_authenticated %}
-            <li class="nav-item">
+            <li class="nav-item" >
               <a class="nav-link text-white" href="{% url 'about' %}">About</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="{% url 'note-index' %}">Notes</a>
+              <a class="nav-link text-white" href="{% url 'note-index' %}">Notes</a>
             </li>
             <li class="nav-item mr-auto">
-              <a class="nav-link" href="{% url 'note-create' %}"
+              <a class="nav-link text-white" href="{% url 'note-create' %}"
                 >Log Your Note</a
               >
             </li>
@@ -43,25 +42,25 @@
                 action="{% url 'admin:logout' %}"
               >
                 {% csrf_token %}
-                <button class="nav-link btn btn-link" type="submit">
+                <button class="nav-link text-white btn btn-link" type="submit">
                   Log Out
                 </button>
               </form>
             </li>
             {% else %}
             <li class="nav-item">
-              <a class="nav-link" href="{% url 'about' %}">About</a>
+              <a class="nav-link text-white" href="{% url 'about' %}">About</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="{% url 'home' %}">Login</a>
+              <a class="nav-link text-white" href="{% url 'home' %}">Login</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="{% url 'signup' %}">Sign Up</a>
+              <a class="nav-link text-white" href="{% url 'signup' %}">Sign Up</a>
             </li>
             {% endif %}
           </ul>
         </nav>
-      </div>
+       
     </header>
     <main>{% block content %} {% endblock %}</main>
   </body>

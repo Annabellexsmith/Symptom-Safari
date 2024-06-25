@@ -8,17 +8,23 @@
     <h4>Symptoms: </h4>
     {% if note.assessment.exists %}
         {% for symptom in note.assessment.all %}
-        <p>{{ symptom.name }}</p>
+        <li>{{ symptom.name }}</li>
     {% endfor %}
     {% else %}
     <p>You didn't record any symptoms!</p>
     {% endif %}
+    <br>
+    <h4>Notes: </h4>
     <p>{{ note.notes }}</p>
     <p>Last Updated: {{ note.updated }}</p>
   </div>
   <div>
-    <a href="{% url 'note-update' note.id %}">Edit</a>
+    <button class="btn btn-primary" style="margin-right: 2rem;">
+    <a href="{% url 'note-update' note.id %}" >Edit</a>
+  </button>
+  <button class="btn btn-primary" ">
     <a href="{% url 'note-delete' note.id %}">Delete</a>
+    </button>
   </div>
 </section>
 {% endblock %}

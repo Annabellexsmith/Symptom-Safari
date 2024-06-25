@@ -27,22 +27,23 @@ def signup(request):
 
 def about(request):
     return render(request, 'about.html')
+
 @login_required
 def note_index(request):    
     notes = Note.objects.filter(user=request.user)
     return render(request, 'notes/index.html', {
         'notes': notes, 
     })
+
 @login_required
 def note_detail(request, note_id):
     note = Note.objects.get(id=note_id)
     return render(request, 'notes/detail.html', {'note': note})
 
 
-
 class NoteCreate(LoginRequiredMixin, CreateView):
     model = Note
-    fields = ['assessment', 'notes']
+    fields = ['assessment', 'notes', 'title']
     success_url = '/notes/'
     def form_valid(self, form):
         form.instance.user = self.request.user
@@ -54,7 +55,7 @@ class NoteDelete(LoginRequiredMixin, DeleteView):
 
 class NoteUpdate(LoginRequiredMixin, UpdateView):
     model = Note
-    fields = ['assessment', 'notes']
+    fields = ['title', 'assessment', 'notes' ]
 
 class Home(LoginView):
     template_name = 'home.html'

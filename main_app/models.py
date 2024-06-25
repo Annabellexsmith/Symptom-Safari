@@ -34,3 +34,6 @@ class Note(models.Model):
             self.updated= timezone.now()
         super().save(*args, **kwargs)
     
+    class Meta:
+        ordering = ["-date"]
+    

@@ -1,18 +1,5 @@
 
-.nav-item .nav-link {
-    color:white; 
-    font-size: xx-large;
-  }
-
-.navbar {
-  color: #F29422
-}
-
-* {
-  display: flex;
-  flex-direction: column;
-}
-
 head {
   display: none;
 }
+

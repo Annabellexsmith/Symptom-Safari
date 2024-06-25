@@ -1,8 +1,7 @@
 body {
-    background: url(../images/tiger.svg) no-repeat center center fixed;
+    background: url(../images/tiger.png) no-repeat center center fixed;
     -webkit-background-size: cover;
     -moz-background-size: cover;
     -o-background-size: cover;
     background-size: cover;
 }
-
