@@ -4,13 +4,10 @@ body {
     -moz-background-size: cover;
     -o-background-size: cover;
     background-size: cover;
-    display: flex;
-    flex-direction: column;
 }
 h1 {
     text-align: center;
-    font-size: 60px;
-    margin-top: 3rem;
+    font-size: var(--font-xtreme);
     color: black;
 } 
 .card-container {
@@ -31,11 +28,21 @@ h1 {
     h5, p {
         color:black;
     }
+    h5 {
+        font-size: var(--font-l)
+    }
+    p{
+        font-size: var(--font-reg)
+    }
   
 }
 .card-body {
-    margin-top: 2rem;
+    padding: 3.5rem 1.5rem;
+    
     height:200px;
 }
 
-
+.card-text{
+    height: 150px;
+    overflow: hidden;
+}

@@ -4,7 +4,7 @@
 <section class="note-container">
   <div class="note-details">
     <h1>{{ note.title }}</h1>
-    <p> {{ note.date }} </p>
+    <p>Created: {{ note.date }} </p>
     <h4>Symptoms: </h4>
     {% if note.assessment.exists %}
         {% for symptom in note.assessment.all %}
@@ -19,12 +19,13 @@
     <p>Last Updated: {{ note.updated }}</p>
   </div>
   <div>
-    <button class="btn btn-primary" style="margin-right: 2rem;">
+    <button class="btn btn-primary" style="margin-right: 2rem; background-color: var(--button-bg); color: var(--button-text-color);">
     <a href="{% url 'note-update' note.id %}" >Edit</a>
   </button>
-  <button class="btn btn-primary" ">
+  <button class="btn btn-primary" style="background-color: var(--button-bg); color: var(--button-text-color);">
     <a href="{% url 'note-delete' note.id %}">Delete</a>
     </button>
   </div>
 </section>
 {% endblock %}
+

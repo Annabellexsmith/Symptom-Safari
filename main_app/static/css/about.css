@@ -1,7 +1,20 @@
 body {
-    background: url(../images/tiger.png) no-repeat center center fixed;
-    -webkit-background-size: cover;
-    -moz-background-size: cover;
-    -o-background-size: cover;
-    background-size: cover;
+  background: url(../images/tiger.png) no-repeat center center fixed;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
 }
+
+h1 {
+    font-size: var(--font-xtreme);
+}
+h3 {
+  font-size: var(--font-xl);
+}
+p {
+  font-size: var(--font-l);
+  width: 50%;
+}
+
+

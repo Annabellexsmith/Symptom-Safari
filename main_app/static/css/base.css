@@ -3,3 +3,32 @@ head {
   display: none;
 }
 
+body {
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto',
+    'Oxygen', 'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans',
+    'Helvetica Neue', sans-serif;
+  min-height: 100vh;
+  --borders: rgb(36, 116, 248) solid 2px;
+  --text-color: rgb(17, 20, 17);
+  --link-hover-color: rgb(16, 56, 158);
+  --button-bg: #8C3A1C;
+  --button-text-color: white;
+  --card-box-shadow: 5px 5px 6px -1px #aaa;
+  --font-xtreme: 4.2rem;
+  --font-xxl: 3.6rem;
+  --font-xl: 2.4rem;
+  --font-l: 1.8rem;
+  --font-reg: 1.6rem;
+  --card-border-radius: 6px;
+}
+
+nav {
+ font-size: var(--font-l);
+ border-bottom-left-radius: 10px;
+ border-bottom-right-radius: 10px;
+}
+

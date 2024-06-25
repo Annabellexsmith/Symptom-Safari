@@ -1,5 +1,6 @@
 {% extends 'base.html' %} 
 {% load static %} 
+{% block title %} Add a Note {% endblock %}
 {% block head %}
 <link rel="stylesheet" href="{% static 'css/form.css' %}" />
 {% endblock %} {% block content %}
@@ -16,7 +17,7 @@
   <table>
     {{ form.as_table }}
   </table>
-  <button type="submit" class="btn btn-primary" style="background-color: purple;" >Submit!</button>
+  <button type="submit" class="btn btn-primary" style="background-color: var(--button-bg); color: var(--button-text-color);" >Submit!</button>
 </form>
 </section>
 </div>

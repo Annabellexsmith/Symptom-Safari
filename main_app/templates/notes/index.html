@@ -9,11 +9,9 @@
   <div class="card" style="width: 18rem; ">
     <a href="{% url 'note-detail' note.id %}" style="text-decoration: none;">
       <div class="card-body">
-        <div class="card-img-container">
-        </div>
         <h5 class="card-title">{{ note.title }}</h3>
         <p class="card-subtitle mb-2 text-muted">{{ note.date|date:"M d, Y" }}</p>
-        <p class="card-text"><medium>{{ note.notes}}</medium></p>
+        <p class="card-text">{{ note.notes}}</p>
       </div>
     </a>
   </div>
