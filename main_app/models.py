@@ -13,6 +13,10 @@ class Symptom(models.Model):
     
     def get_absolute_url(self):
         return reverse('symptom-detail', kwargs={'pk': self.id})
+    
+# class Feeling(models.Model):
+#     emotion = models.CharField()
+    
 
 class Note(models.Model):
     user = models.ForeignKey(User, on_delete=models.CASCADE)

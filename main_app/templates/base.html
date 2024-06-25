@@ -19,10 +19,10 @@
   <body>
     <header>
         <nav
-          class="navbar navbar-expand-lg  justify-content-end"
+          class="navbar navbar-expand-lg "
           style="background-color: #567317;"
         >
-          <ul class="nav nav-fill">
+          <ul class="navbar-nav ml-auto nav">
             {% if user.is_authenticated %}
             <li class="nav-item" >
               <a class="nav-link text-white" href="{% url 'about' %}">About</a>
@@ -45,7 +45,7 @@
                 action="{% url 'admin:logout' %}"
               >
                 {% csrf_token %}
-                <button class="nav-link text-white btn btn-link" type="submit">
+                <button class="nav-link text-white btn-link" type="submit">
                   Log Out
                 </button>
               </form>
@@ -63,7 +63,6 @@
             {% endif %}
           </ul>
         </nav>
-       
     </header>
     <main>{% block content %} {% endblock %}</main>
   </body>

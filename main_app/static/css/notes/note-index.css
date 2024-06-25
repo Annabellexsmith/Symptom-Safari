@@ -4,11 +4,15 @@ body {
     -moz-background-size: cover;
     -o-background-size: cover;
     background-size: cover;
+    font-family: var(--varela);
 }
 h1 {
     text-align: center;
     font-size: var(--font-xtreme);
     color: black;
+    font-family: var(--marker);
+    letter-spacing: 10px;
+    margin-top: 3rem;
 } 
 .card-container {
     display: flex;
@@ -29,7 +33,9 @@ h1 {
         color:black;
     }
     h5 {
-        font-size: var(--font-l)
+        font-size: var(--font-l);
+        font-family: var(--marker);
+        letter-spacing: 3px;
     }
     p{
         font-size: var(--font-reg)
@@ -38,7 +44,6 @@ h1 {
 }
 .card-body {
     padding: 3.5rem 1.5rem;
-    
     height:200px;
 }
 
