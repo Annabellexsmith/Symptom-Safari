@@ -17,7 +17,7 @@ class Symptom(models.Model):
 class Note(models.Model):
     user = models.ForeignKey(User, on_delete=models.CASCADE)
     title = models.CharField(max_length=250)
-    date = models.DateTimeField(auto_now_add=True)
+    date = models.DateField(auto_now_add=True)
     updated = models.DateField(auto_now=True)
     assessment = models.ManyToManyField(Symptom)
     notes = models.TextField(max_length=500)
