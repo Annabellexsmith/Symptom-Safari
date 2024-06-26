@@ -12,11 +12,11 @@
 <h1>Add a Note!</h1>
 {% endif %}
 <div class="container">
-<section class="form-control form-control-lg" style="background-color:#567317f3; border: #567317dc; margin-top: 1rem; " >
+<section class="form-control form-control-lg" id="select2" style="background-color:#567317f3; border: #567317dc; margin-top: 1rem; " >
 <form action="" method="post" class="form-container">
   {% csrf_token %}
   <table>
-    {{ form.as_table }}
+    {{ form.as_p }}
   </table>
   <button type="submit" class=" btn btn-primary" >Submit!</button>
 </form>

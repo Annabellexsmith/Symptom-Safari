@@ -32,7 +32,7 @@ body {
         color: var(--button-text-color);
       }
     }
-  h1{
+  h1{ 
     font-family: var(--marker);
     letter-spacing: 15px;
     font-size: var(--font-xxl);
