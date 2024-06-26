@@ -3,10 +3,11 @@
 {% block title %} Add a Note {% endblock %}
 {% block head %}
 <link rel="stylesheet" href="{% static 'css/form.css' %}" />
+{{ form.media.css }}
 {% endblock %} {% block content %}
 
 {% if object %}
-<h1>Edit Your Note from {{note.date |date:"M d, Y"}}</h1>
+<h1>Edit Your Note from {{note.date |date:"M d"}}</h1>
 {% else %}
 <h1>Add a Note!</h1>
 {% endif %}
@@ -19,6 +20,8 @@
   </table>
   <button type="submit" class=" btn btn-primary" >Submit!</button>
 </form>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+{{ form.media.js }}
 </section>
 </div>
 {% endblock %}

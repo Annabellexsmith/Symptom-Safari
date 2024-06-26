@@ -1,7 +1,8 @@
 from django.shortcuts import render
 from django.shortcuts import render, redirect
 from django.views.generic.edit import CreateView
-from .models import Note, Symptom
+from .models import Note
+from .form import NoteForm
 from django.views.generic.edit import CreateView, UpdateView, DeleteView
 from django.contrib.auth.views import LoginView
 from django.contrib.auth import login
@@ -10,10 +11,9 @@ from django.contrib.auth.decorators import login_required
 from django.contrib.auth.mixins import LoginRequiredMixin
 from django.http import HttpResponse
 from reportlab.lib.pagesizes import letter
-from reportlab.pdfgen import canvas
 from reportlab.lib.styles import getSampleStyleSheet
 from reportlab.platypus import Paragraph, SimpleDocTemplate, Spacer
-from reportlab.lib.units import inch
+
 
 
 # Create your views here.
@@ -81,7 +81,7 @@ def export(request):
 
 class NoteCreate(LoginRequiredMixin, CreateView):
     model = Note
-    fields = ["assessment", "notes", "title"]
+    form_class = NoteForm
     success_url = "/notes/"
 
     def form_valid(self, form):
@@ -96,7 +96,7 @@ class NoteDelete(LoginRequiredMixin, DeleteView):
 
 class NoteUpdate(LoginRequiredMixin, UpdateView):
     model = Note
-    fields = ["title", "assessment", "notes"]
+    form_class = NoteForm
 
 
 class Home(LoginView):

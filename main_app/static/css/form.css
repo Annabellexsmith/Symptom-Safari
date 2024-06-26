@@ -11,8 +11,11 @@ h1 {
   font-family: var(--marker);
   letter-spacing: 10px;
   text-align: center;
-  margin: 3rem;
-  font-size: var(--font-xl);
+  margin: 3rem auto; 
+  font-size:var(--font-xtreme);
+  align-items: center;
+  width:fit-content;
+  border-radius: 10px;
 }
 .form-control {
     color: white;
@@ -20,22 +23,27 @@ h1 {
     display: flex;
     justify-content: center;
     align-items: center;
-    display: flex;
     width: 60%;
 }
 .container {
     display: flex;
     justify-content: center;
     align-items: center;
+  
 }
 
 .form-container {
     display: flex;
     width: 100%;
+   
     table {
       padding: 0 40px;
       width: 90em;
       border-spacing: 0 20px;
+    }
+
+    input{
+      border-radius: 4px;
     }
  
   th {
@@ -43,6 +51,7 @@ h1 {
     padding: 6px 20px 0 0;
     font-weight: normal;
     vertical-align: top;  }
+   
   
   td {
     max-width: 60%;
@@ -55,14 +64,24 @@ h1 {
   
   td > textarea {
     font-family: inherit;
+    border-radius: 4px;
   }
   
   .btn {
-    align-self: flex-end;
-    margin-right: 40px;
+    align-self:end;
+    margin: 40px;
     background-color: var(--button-bg);
     color: var(--button-text-color);
     border: var(--button-text-color);
   }
+
+  .select2-container .select2-selection--multiple .select2-selection__rendered {
+    color:white;
+    overflow: auto;
+    border: none;
+    .select2-selection__choice {
+      background-color: #394d0ff3;
+      padding: 3px, 5px;
+    }
 }
-  
+}
