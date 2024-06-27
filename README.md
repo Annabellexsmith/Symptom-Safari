@@ -14,7 +14,7 @@ Make sure you create a user profile. Have fun on the Safari!
 ![WireFrame Login](main_app/static/images/homepg-wireframe.png "WireFrame for login page")
 ![WireFrame Create](main_app/static/images/create-wireframe.png "WireFrame for creating a note")
 ![WireFrame Index](main_app/static/images/index-wireframe.png "WireFrame for index page")
-![ERD](main_app/static/images/planning-erd.png "ERD showing user has one to many notes with many to many moods")
+![ERD](main_app/static/images/planning-ERD.png "ERD showing user has one to many notes with many to many moods")
 ##  Technologies used
 ![PSQL](https://img.shields.io/badge/PostgreSQL-316192?style=for-the-badge&logo=postgresql&logoColor=white)
 ![Python](https://img.shields.io/badge/Python-14354C?style=for-the-badge&logo=python&logoColor=white)
