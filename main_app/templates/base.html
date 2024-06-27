@@ -42,7 +42,7 @@
               <form
                 id="logout-form"
                 method="post"
-                action="{% url 'admin:logout' %}"
+                action="{% url 'logout' %}"
               >
                 {% csrf_token %}
                 <button class="nav-link text-white btn-link" type="submit">

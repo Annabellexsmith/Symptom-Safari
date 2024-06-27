@@ -1,15 +1,9 @@
 from django import forms
 from django_select2.forms import Select2MultipleWidget
-from .models import Note, Symptom
+from .models import Note, User
 
 
 class NoteForm(forms.ModelForm):
-    # title = forms.CharField(widget=forms.TextInput(attrs={'placeholder': 'Name', 'style': 'width: 300px;', 'class': 'form-control'}))
-
-    # assessment = forms.CharField(widget=forms.TextInput(attrs={'style': 'width: 100%;'}))
-
-    # notes = forms.CharField(widget=forms.Textarea(attrs={'style': 'width: 100%;',}))
-
     class Meta:
         model = Note
         fields = [ "title", "assessment", "notes"]
@@ -35,4 +29,19 @@ class NoteForm(forms.ModelForm):
         }
 
 
-from django import forms
+# class SignUpForm(forms.ModelForm):
+#     class Meta:
+#         model = User
+#         fields = ["username", "password"]
+#         widgets = {
+#             "username": forms.TextInput(
+#                 attrs={
+#                     'style': "width:100%;"
+#                 }
+#             ),
+#             "password": forms.TextInput(
+#                 attrs={
+#                     'style': "width:100%;"
+#                 }
+#             ),
+#         }

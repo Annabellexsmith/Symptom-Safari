@@ -1,0 +1,25 @@
+body {
+    background: url(../images/delete-page.png) no-repeat center center fixed;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+    display: flex;
+    flex-direction: column;
+}
+
+h1 {
+    font-size: var(--font-xtreme);
+    font-family: var(--marker);
+    letter-spacing: 6px;
+}
+
+.btn, .btn:hover{
+    align-self:end;
+    margin: 40px;
+    background-color: var(--button-bg);
+    color: var(--button-text-color);
+    border: var(--button-text-color);
+  }
+
+  

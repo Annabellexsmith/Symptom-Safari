@@ -1,5 +1,14 @@
-{% extends 'base.html' %}
+{% extends 'base.html' %} 
 {% load static %} 
+
+{% block title %} 
+Delete Note
+{% endblock %}
+
+{% block head %}
+<link rel="stylesheet" href="{% static 'css/confirm-delete.css' %}" />
+{% endblock %} 
+
 {% block content %}
 <div class="page-header">
   <h1>Delete Note?</h1>

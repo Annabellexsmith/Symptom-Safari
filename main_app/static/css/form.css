@@ -68,11 +68,15 @@ h1 {
   td > textarea {
     font-family: inherit;
     border-radius: 4px;
+   
   }
 textarea {
   border-radius: 4px;
+
 }
- 
+input {
+  width: fit-content;
+ }
   
   .btn {
     align-self:end;
