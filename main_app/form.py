@@ -1,6 +1,6 @@
 from django import forms
 from django_select2.forms import Select2MultipleWidget
-from .models import Note, User
+from .models import Note
 
 
 class NoteForm(forms.ModelForm):
@@ -28,20 +28,3 @@ class NoteForm(forms.ModelForm):
             ),
         }
 
-
-# class SignUpForm(forms.ModelForm):
-#     class Meta:
-#         model = User
-#         fields = ["username", "password"]
-#         widgets = {
-#             "username": forms.TextInput(
-#                 attrs={
-#                     'style': "width:100%;"
-#                 }
-#             ),
-#             "password": forms.TextInput(
-#                 attrs={
-#                     'style': "width:100%;"
-#                 }
-#             ),
-#         }
