@@ -11,6 +11,7 @@ https://docs.djangoproject.com/en/5.0/ref/settings/
 """
 
 from pathlib import Path
+import django_select2
 import dj_database_url
 from dotenv import load_dotenv
 import os
