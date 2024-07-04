@@ -1,5 +1,5 @@
 body {
-    background: url(../../images/lion4.png)no-repeat center center fixed;
+    background: url(../../images/lion-jumping.png)no-repeat center center fixed;
     -webkit-background-size: cover;
     -moz-background-size: cover;
     -o-background-size: cover;
@@ -21,7 +21,7 @@ h1 {
   }
 
 .card{
-    background: url(../../images/contrast.png) no-repeat center;
+    background: url(../../images/notebook.png) no-repeat center;
     background-size: cover;
     width:200px;
     height: 350px;
